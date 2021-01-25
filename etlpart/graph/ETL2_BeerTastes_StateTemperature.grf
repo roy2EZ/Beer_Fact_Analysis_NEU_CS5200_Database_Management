@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Graph author="roych" created="Sat Nov 16 21:19:01 PST 2019" guiVersion="5.4.0.8" id="1573977897416" licenseCode="CLP1DONEPL66168593EX" name="ETL2" showComponentDetails="true">
+<Global>
+<Metadata id="Metadata8">
+<Record fieldDelimiter="|" name="BeerAvgTasteScoreByState" previewAttachmentCharset="UTF-8" recordDelimiter="\r\n" type="delimited">
+<Field name="BeerState" type="string"/>
+<Field format="#.##" name="BeerTaste" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata14">
+<Record fieldDelimiter="|" name="beerJoined" previewAttachmentCharset="UTF-8" recordDelimiter="\r\n" type="delimited">
+<Field delimiter="," name="State" type="string"/>
+<Field delimiter="," name="AvgBeerTasteScore" type="decimal"/>
+<Field delimiter="," name="TemperatureRank" type="integer"/>
+<Field delimiter="," name="Celsius" type="decimal"/>
+<Field name="Fahrenheit" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata4">
+<Record fieldDelimiter=";" name="beers" recordDelimiter="\n" type="delimited">
+<Field name="BeerId" size="255" type="string"/>
+<Field name="BeerState" size="255" type="string"/>
+<Field format="#.##" name="TasteScore" size="255" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata0">
+<Record fieldDelimiter=";" name="beersTastes" recordDelimiter="\n" type="delimited">
+<Field name="BeerId" size="255" type="string"/>
+<Field name="BeerState" size="255" type="string"/>
+<Field format="#.###" name="TasteScore" size="255" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata3">
+<Record fieldDelimiter="|" name="beerTaste" recordDelimiter="\r\n" type="delimited">
+<Field delimiter="," name="state" type="string"/>
+<Field delimiter="," format="#.##" name="taste" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata11">
+<Record fieldDelimiter="|" name="BeerTasteAndStateTempRank" previewAttachmentCharset="UTF-8" recordDelimiter="\r\n" type="delimited">
+<Field name="beerTaste" type="decimal"/>
+<Field name="stateTempRank" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata7">
+<Record fieldDelimiter="|" name="BeerTasteByStateTemp" recordDelimiter="\r\n" type="delimited">
+<Field name="StateTempRank" trim="true" type="integer"/>
+<Field format="#.##" length="12" name="BeerTaste" scale="2" trim="true" type="decimal"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata9">
+<Record fieldDelimiter="|" name="BeerTasteByStateTemp" recordDelimiter="\r\n" type="delimited">
+<Field name="BeerState" type="string"/>
+<Field format="#.##" name="BeerAvgTaste" type="decimal"/>
+<Field name="StateTempRank" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata10">
+<Record fieldDelimiter="|" name="BeerTasteByStateTemp" recordDelimiter="\r\n" type="delimited">
+<Field name="BeerState" type="string"/>
+<Field format="#.##" name="BeerTaste" type="decimal"/>
+<Field name="StateTempRank" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata2">
+<Record fieldDelimiter="|" name="stateTemp" previewAttachmentCharset="UTF-8" recordDelimiter="\r\n" type="delimited">
+<Field name="state" type="string"/>
+<Field name="tempRank" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata12">
+<Record fieldDelimiter="|" name="StateTemp" recordDelimiter="\r\n" type="delimited">
+<Field name="State" type="string"/>
+<Field name="TempRank" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata6">
+<Record fieldDelimiter="|" name="StateTempRank" recordDelimiter="\r\n" type="delimited">
+<Field name="state" type="string"/>
+<Field name="tempRank" type="integer"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata1">
+<Record fieldDelimiter="," name="US_State_Temp" previewAttachment="${DATAIN_DIR}/US_State_Temp.csv" previewAttachmentCharset="UTF-8" quoteChar="both" quotedStrings="false" recordDelimiter="\r\n" skipSourceRows="1" type="delimited">
+<Field label="﻿State" name="State" type="string"/>
+<Field label="Avg °F" name="Avg_F" scale="1" type="decimal"/>
+<Field label="Avg °C" name="Avg_C" scale="1" type="decimal"/>
+<Field label="Rank" name="Rank" type="integer"/>
+<Field eofAsDelimiter="true" name="_" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata5">
+<Record fieldDelimiter="," name="US_State_Temp" previewAttachment="${DATAIN_DIR}/US_State_Temp.csv" previewAttachmentCharset="UTF-8" quoteChar="both" quotedStrings="false" recordDelimiter="\r\n" skipSourceRows="1" type="delimited">
+<Field label="﻿State" name="State" type="string"/>
+<Field label="Avg °F" name="Avg_F" scale="1" type="decimal"/>
+<Field label="Avg °C" name="Avg_C" scale="1" type="decimal"/>
+<Field label="Rank" name="Rank" type="integer"/>
+<Field eofAsDelimiter="true" name="_" type="string"/>
+</Record>
+</Metadata>
+<Metadata id="Metadata13">
+<Record fieldDelimiter="," name="US_State_Temp" previewAttachment="${DATAIN_DIR}/US_State_Temp.csv" previewAttachmentCharset="UTF-8" quoteChar="both" quotedStrings="false" recordDelimiter="\r\n" skipSourceRows="1" type="delimited">
+<Field label="﻿State" name="State" type="string"/>
+<Field label="Avg °F" name="Avg_F" scale="1" type="decimal"/>
+<Field label="Avg °C" name="Avg_C" scale="1" type="decimal"/>
+<Field eofAsDelimiter="true" label="Rank" name="Rank" type="integer"/>
+</Record>
+</Metadata>
+<Connection database="MYSQL" dbURL="jdbc:mysql://localhost:3306/BeerFactAnalysis?useSSL=false" id="JDBC0" jdbcSpecific="MYSQL" name="NewConnection" password="cnm3dynm3q" type="JDBC" user="root"/>
+<GraphParameters>
+<GraphParameterFile fileURL="workspace.prm"/>
+</GraphParameters>
+<Dictionary/>
+</Global>
+<Phase number="0">
+<Node dbConnection="JDBC0" guiName="DatabaseReader" guiX="90" guiY="84" id="DATABASE_READER" type="DB_INPUT_TABLE">
+<attr name="sqlQuery"><![CDATA[select `beerfactanalysis`.`beers`.`BeerState`,round(avg(`beerfactanalysis`.`tastes`.`TasteScore`),2)
+from `beerfactanalysis`.`beers`
+inner join `beerfactanalysis`.`tastes`
+on `beerfactanalysis`.`beers`.`BeerId` = `beerfactanalysis`.`tastes`.`BeerId`
+where `beerfactanalysis`.`tastes`.`TasteScore` > 0 and `beerfactanalysis`.`beers`.`BeerCountry` = 'US'
+group by `beerfactanalysis`.`beers`.`BeerState`
+order by `beerfactanalysis`.`beers`.`BeerState`]]></attr>
+</Node>
+<Node guiName="ExtHashJoin" guiX="444" guiY="84" id="EXT_HASH_JOIN" joinKey="$BeerState=$State" joinType="inner" type="EXT_HASH_JOIN">
+<attr name="transform"><![CDATA[//#CTL2
+
+// Transforms input record into output record.
+function integer transform() {
+	$out.0.State = $in.0.BeerState;
+	$out.0.AvgBeerTasteScore = $in.0.BeerTaste;
+	$out.0.TemperatureRank = $in.1.Rank;
+	$out.0.Celsius = $in.1.Avg_C;
+	$out.0.Fahrenheit = $in.1.Avg_F;
+
+	return ALL;
+}
+
+// Called during component initialization.
+// function boolean init() {}
+
+// Called during each graph run before the transform is executed. May be used to allocate and initialize resources
+// required by the transform. All resources allocated within this method should be released
+// by the postExecute() method.
+// function void preExecute() {}
+
+// Called only if transform() throws an exception.
+// function integer transformOnError(string errorMessage, string stackTrace) {}
+
+// Called during each graph run after the entire transform was executed. Should be used to free any resources
+// allocated within the preExecute() method.
+// function void postExecute() {}
+
+// Called to return a user-defined error message when an error occurs.
+// function string getMessage() {}
+]]></attr>
+</Node>
+<Node existingSheetsActions="REMOVE_SHEETS" fileURL="${DATAOUT_DIR}/BeerTasteByStateTemp.xlsx" guiName="SpreadsheetDataWriter" guiX="735" guiY="84" id="SPREADSHEET_DATA_WRITER" sheet="Sheet0" type="SPREADSHEET_WRITER" writeMode="OVERWRITE_SHEET_IN_MEMORY">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+    <globalAttributes>
+        <orientation>VERTICAL</orientation>
+        <step>1</step>
+        <writeHeader>true</writeHeader>
+    </globalAttributes>
+    <defaultSkip>1</defaultSkip>
+    <headerGroups>
+        <headerGroup skip="1">
+            <cloverField>State</cloverField>
+            <headerRanges>
+                <headerRange begin="A1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <cloverField>TemperatureRank</cloverField>
+            <headerRanges>
+                <headerRange begin="B1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <autoMappingType>ORDER</autoMappingType>
+            <headerRanges>
+                <headerRange begin="C1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <cloverField>Celsius</cloverField>
+            <headerRanges>
+                <headerRange begin="D1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <cloverField>Fahrenheit</cloverField>
+            <headerRanges>
+                <headerRange begin="E1"/>
+            </headerRanges>
+        </headerGroup>
+    </headerGroups>
+</mapping>
+]]></attr>
+</Node>
+<Node dataPolicy="lenient" fileURL="${DATAIN_DIR}/US_State_Temp.csv" guiName="UniversalDataReader" guiX="73" guiY="188" id="UNIVERSAL_DATA_READER" skipFirstLine="true" skipLeadingBlanks="true" trim="true" type="DATA_READER"/>
+<Edge fromNode="DATABASE_READER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge1" inPort="Port 0 (driver)" metadata="Metadata8" outPort="Port 0 (out)" toNode="EXT_HASH_JOIN:0"/>
+<Edge fromNode="EXT_HASH_JOIN:0" guiBendpoints="" guiRouter="Manhattan" id="Edge0" inPort="Port 0 (input)" metadata="Metadata14" outPort="Port 0 (out)" toNode="SPREADSHEET_DATA_WRITER:0"/>
+<Edge fromNode="UNIVERSAL_DATA_READER:0" guiBendpoints="" guiRouter="Manhattan" id="Edge2" inPort="Port 1 (slave)" metadata="Metadata5" outPort="Port 0 (output)" toNode="EXT_HASH_JOIN:1"/>
+</Phase>
+</Graph>
