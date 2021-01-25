@@ -1,6 +1,10 @@
-**Beer Fun Fact Analysis** project for *NEU 2019 Fall CS5200 database management* course (Sep. - Dec. 2019)
+# Beer Fun Fact Analysis
+project for *NEU 2019 Fall CS5200 database management* course (Sep. - Dec. 2019)
 
-This project designed and implemented an database for analyze rating and reviews of 350000+ beer brands in US:
+## Project Description
+This project designed and implemented an database for analyze rating and reviews of 350000+ beer brands in US.
+We want to use the data to find some fun facts about beer.
+## Project Development and Database Management
 - Implementd a database with MySQL of beer rating and reviews record from following open data sources:  
   [*Beers bereweries and reviews* data from www.kaggle.com](https://www.kaggle.com/ehallmar/beers-breweries-and-beer-reviews)
 - Developed a web application to query the database and display results using Java JDBC/JSP:
@@ -8,7 +12,7 @@ This project designed and implemented an database for analyze rating and reviews
   - Used JSP to build the web application
   - Run on Tomcat server
   - Used web application to perform create, read, update, delete (CRUD) operations on database
-- Data Warehousing
+## Data Warehousing
   Used CloverDX for data warehousing for analysis of relationship between beer taste and temperature.
   Two External Data Source for data warehousing:
   - External data source 1:
@@ -18,8 +22,7 @@ This project designed and implemented an database for analyze rating and reviews
     [Average Annual Temperature for Each US State](https://www.currentresults.com/Weather/US/average-annual-state-temperatures.php)
     To see relationship between Brewing State average temperature and Beer taste.
   - [Report slide](https://docs.google.com/presentation/d/1a8XW-jS5uj_Fbt9anVP3elJJ6PADMVZprq4D70GWzoM/edit?usp=sharing)
-
-Presentation Video Links:
+## Presentation Video Links
 1. Project Proposition & Delivered Results:
   [link](https://youtu.be/ETBDbZqRzj8)
 2. Database Building(UML & Data source processing): 
