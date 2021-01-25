@@ -1,5 +1,5 @@
 # Beer Fun Fact Analysis
-project for *NEU 2019 Fall CS5200 database management* course (Sep. - Dec. 2019)
+This is a project for *NEU 2019 Fall CS5200 database management* course (Sep. - Dec. 2019)
 
 ## Project Description
 This project designed and implemented an database for analyze rating and reviews of 350000+ beer brands in US.
